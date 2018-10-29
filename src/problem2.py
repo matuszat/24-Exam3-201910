@@ -2,9 +2,9 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Austin Matuszewski  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Austin Matuszewski: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -90,10 +90,17 @@ def problem2(sequence):
       :type sequence [list]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    #only one test case works go back if time
+    fun = 0
+    for k in range(len(sequence)):
+        if sequence[k] < 0:
+            sequence[k] = -1
+        if sequence[k] > sequence[fun]:
+            fun = k
+        return fun
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
